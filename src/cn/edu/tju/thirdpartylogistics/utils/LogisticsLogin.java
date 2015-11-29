@@ -22,6 +22,10 @@ import cn.edu.tju.thirdpartylogistics.listener.OnReloginListener;
  * 
  */
 public class LogisticsLogin {
+	
+	public static final int LOGIN_ROLE_SHIPPING_POINT = 1;
+	public static final int LOGIN_ROLE_DRIVER = 2;
+	
 	public static final int RESULT_OK = 200;
 	public static final int RESULT_TIMEOUT = 201;
 	public static final int RESULT_AUTH_FAILED = 202;
@@ -31,7 +35,7 @@ public class LogisticsLogin {
 	private Context mContext;
 	private String mAccount;
 	private String mPassword;
-	private String mResource;
+	private int mRoleType;
 	private OnLogoutListener mPublicLogoutLestener;
 
 	public static LogisticsLogin getInstance() {
@@ -43,9 +47,10 @@ public class LogisticsLogin {
 //		instance.mContext = context;
 	}
 
-	public void login(String account, String authcookie, OnLoginListener listener) {
+	public void login(String account, String authcookie, int roleType, OnLoginListener listener) {
 		this.mAccount = account;
 		this.mPassword = authcookie;
+		this.mRoleType = roleType;
 		this.loginTask(listener);
 	}
 

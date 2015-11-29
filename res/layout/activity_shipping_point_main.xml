@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.edu.tju.thirdpartylogistics.ui.activity.ShippingPointMainActivity" >
+
+    <Button
+        android:id="@+id/btn_in_port_shipping_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/in_port_scan_code" />
+    
+    <Button
+        android:id="@+id/btn_out_port_shipping_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/out_port_scan_code" />
+    
+    <Button
+        android:id="@+id/btn_deliver_shipping_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deliver_scan_code" />
+
+</LinearLayout>

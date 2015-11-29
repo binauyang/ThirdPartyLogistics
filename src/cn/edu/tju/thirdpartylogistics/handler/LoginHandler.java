@@ -32,7 +32,7 @@ public class LoginHandler {
 		}).start();
 	}
 
-	public static void login(final Context context, final String account, final String password, final LogisticsCallback.LoginCallback callback) {
+	public static void login(final Context context, final String account, final String password, final int roleType, final LogisticsCallback.LoginCallback callback) {
 		final OnLoginListener onLoginListener = new OnLoginListener() {
 			@Override
 			public void onLoginSuccess() {
@@ -48,9 +48,9 @@ public class LoginHandler {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				NameValuePair pair = HttpActions.loginPassport(account, password);
-				String authcookie = pair != null ? pair.getValue() : password;
-				LogisticsLogin.getInstance().login(account, authcookie, onLoginListener);
+//				NameValuePair pair = HttpActions.loginPassport(account, password);
+//				String authcookie = pair != null ? pair.getValue() : password;
+				LogisticsLogin.getInstance().login(account, password, roleType, onLoginListener);
 			}
 		}).start();
 	}

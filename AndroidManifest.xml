@@ -43,7 +43,9 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="cn.edu.tju.thirdpartylogistics.ui.activity.MainActivity"></activity>
+        <activity android:name="cn.edu.tju.thirdpartylogistics.ui.activity.ShippingPointMainActivity"></activity>
+        <activity android:name="cn.edu.tju.thirdpartylogistics.ui.activity.DriverMainActivity"></activity>
+    	<activity android:name="cn.edu.tju.thirdpartylogistics.ui.activity.MipcaActivityCapture"></activity>
     </application>
 
 </manifest>

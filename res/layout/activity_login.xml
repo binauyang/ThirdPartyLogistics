@@ -22,6 +22,28 @@
         android:maxLines="1"
         android:singleLine="true" />
 
+    <RadioGroup
+        android:id="@+id/rg_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_role_shipping_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_role_shipping_point"
+            android:checked="true" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_role_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_role_driver" >
+        </RadioButton>
+    </RadioGroup>
+
     <Button
         android:id="@+id/btn_login"
         style="?android:textAppearanceSmall"

@@ -13,8 +13,8 @@ import cn.edu.tju.thirtpartylogistics.R;
 
 public class DriverMainActivity extends Activity implements OnClickListener{
 	
-	private static final int CODE_IN_PORT = 1;
-	private static final int CODE_OUT_PORT = 2;
+	private static final int SCAN_TYPE_IN_PORT = 1;
+	private static final int SCAN_TYPE_OUT_PORT = 2;
 	private static final String SCAN_TYPE_CODE = "SCAN_TYPE_CODE";
 	
 	private Button mInportButton;
@@ -57,10 +57,10 @@ public class DriverMainActivity extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_in_port_driver:
-			jumpToScanCodeActivity(CODE_IN_PORT);
+			jumpToScanCodeActivity(SCAN_TYPE_IN_PORT);
 			break;
 		case R.id.btn_out_port_driver:
-			jumpToScanCodeActivity(CODE_OUT_PORT);
+			jumpToScanCodeActivity(SCAN_TYPE_OUT_PORT);
 			break;
 		default:
 			break;

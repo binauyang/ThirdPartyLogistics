@@ -13,9 +13,11 @@ import cn.edu.tju.thirtpartylogistics.R;
 
 public class ShippingPointMainActivity extends Activity implements OnClickListener{
 	
-	private static final int CODE_IN_PORT = 1;
-	private static final int CODE_OUT_PORT = 2;
-	private static final int CODE_DELIVER = 3;
+	private final static int SCANNIN_GREQUEST_CODE = 1;
+	
+	private static final int SCAN_TYPE_IN_PORT = 1;
+	private static final int SCAN_TYPE_OUT_PORT = 2;
+	private static final int SCAN_TYPE_DELIVER = 3;
 	private static final String SCAN_TYPE_CODE = "SCAN_TYPE_CODE";
 	
 	private Button mInportButton;
@@ -61,14 +63,29 @@ public class ShippingPointMainActivity extends Activity implements OnClickListen
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_in_port_shipping_point:
-			jumpToScanCodeActivity(CODE_IN_PORT);
+			jumpToScanCodeActivity(SCAN_TYPE_IN_PORT);
 			break;
 		case R.id.btn_out_port_shipping_point:
-			jumpToScanCodeActivity(CODE_OUT_PORT);
+			jumpToScanCodeActivity(SCAN_TYPE_OUT_PORT);
 			break;
 		case R.id.btn_deliver_shipping_point:
-			jumpToScanCodeActivity(CODE_DELIVER);
+			jumpToScanCodeActivity(SCAN_TYPE_DELIVER);
 			break;
+		default:
+			break;
+		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		switch (requestCode) {
+		case SCANNIN_GREQUEST_CODE:
+			if(resultCode == RESULT_OK) {
+				
+			}
+			break;
+
 		default:
 			break;
 		}
@@ -76,9 +93,6 @@ public class ShippingPointMainActivity extends Activity implements OnClickListen
 	
 	private void jumpToScanCodeActivity(int code) {
 		Intent intent = new Intent(ShippingPointMainActivity.this, MipcaActivityCapture.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt(SCAN_TYPE_CODE, code);
-		intent.putExtras(bundle);
-		startActivity(intent);
+		startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
 	}
 }

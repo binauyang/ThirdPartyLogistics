@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import cn.edu.tju.thirdpartylogistics.constants.ScanCodeType;
 import cn.edu.tju.thirtpartylogistics.R;
 
 
@@ -15,10 +16,7 @@ public class ShippingPointMainActivity extends Activity implements OnClickListen
 	
 	private final static int SCANNIN_GREQUEST_CODE = 1;
 	
-	private static final int SCAN_TYPE_IN_PORT = 1;
-	private static final int SCAN_TYPE_OUT_PORT = 2;
-	private static final int SCAN_TYPE_DELIVER = 3;
-	private static final String SCAN_TYPE_CODE = "SCAN_TYPE_CODE";
+	private int mScanCodeType = 0;
 	
 	private Button mInportButton;
 	private Button mOutportButton;
@@ -63,17 +61,18 @@ public class ShippingPointMainActivity extends Activity implements OnClickListen
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_in_port_shipping_point:
-			jumpToScanCodeActivity(SCAN_TYPE_IN_PORT);
+			mScanCodeType = ScanCodeType.SCAN_TYPE_IN_PORT;
 			break;
 		case R.id.btn_out_port_shipping_point:
-			jumpToScanCodeActivity(SCAN_TYPE_OUT_PORT);
+			mScanCodeType = ScanCodeType.SCAN_TYPE_OUT_PORT;
 			break;
 		case R.id.btn_deliver_shipping_point:
-			jumpToScanCodeActivity(SCAN_TYPE_DELIVER);
+			mScanCodeType = ScanCodeType.SCAN_TYPE_DELIVER;
 			break;
 		default:
 			break;
 		}
+		jumpToScanCodeActivity();
 	}
 	
 	@Override
@@ -91,8 +90,11 @@ public class ShippingPointMainActivity extends Activity implements OnClickListen
 		}
 	}
 	
-	private void jumpToScanCodeActivity(int code) {
-		Intent intent = new Intent(ShippingPointMainActivity.this, MipcaActivityCapture.class);
+	private void jumpToScanCodeActivity() {
+		Intent intent = new Intent(ShippingPointMainActivity.this, CaptureActivity.class);
+		Bundle bundle = new Bundle();
+		bundle.putInt(CaptureActivity.SCAN_CODE_TYPE, mScanCodeType);
+		intent.putExtras(bundle);
 		startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
 	}
 }

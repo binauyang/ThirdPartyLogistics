@@ -494,70 +494,84 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f060000;
         public static final int activity_vertical_margin=0x7f060001;
+        public static final int title_height=0x7f060002;
     }
     public static final class drawable {
-        public static final int backgroud_toast=0x7f020000;
-        public static final int bg_dialog_conn=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int mm_title_back_btn=0x7f020003;
-        public static final int mm_title_back_focused=0x7f020004;
-        public static final int mm_title_back_normal=0x7f020005;
-        public static final int mm_title_back_pressed=0x7f020006;
-        public static final int mm_title_btn_focused=0x7f020007;
-        public static final int mm_title_btn_menu_normal=0x7f020008;
-        public static final int mm_title_btn_normal=0x7f020009;
-        public static final int mm_title_btn_pressed=0x7f02000a;
-        public static final int mm_title_right_btn=0x7f02000b;
-        public static final int mmtitle_bg_alpha=0x7f02000c;
-        public static final int qrcode_scan_line=0x7f02000d;
+        public static final int actionbar_up_indicator=0x7f020000;
+        public static final int app_icon=0x7f020001;
+        public static final int backgroud_toast=0x7f020002;
+        public static final int bg_dialog_conn=0x7f020003;
+        public static final int bg_login=0x7f020004;
+        public static final int capture=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int login_edit_background=0x7f020007;
+        public static final int login_edit_cancel=0x7f020008;
+        public static final int login_password_icon=0x7f020009;
+        public static final int login_user_icon=0x7f02000a;
+        public static final int scan_code_result_failed=0x7f02000b;
+        public static final int scan_code_result_success=0x7f02000c;
+        public static final int scan_line=0x7f02000d;
+        public static final int scan_mask=0x7f02000e;
+        public static final int selector_btn_blue_corner=0x7f02000f;
+        public static final int shape_btn_blue=0x7f020010;
+        public static final int shape_btn_blue_hl=0x7f020011;
+        public static final int shape_btn_grey=0x7f020012;
+        public static final int shipping_point_delivery_scan_code=0x7f020013;
+        public static final int shipping_point_in_port_scan_code=0x7f020014;
+        public static final int shipping_point_logo=0x7f020015;
+        public static final int shipping_point_out_port_scan_code=0x7f020016;
+        public static final int welcome=0x7f020017;
     }
     public static final class id {
-        public static final int about_version_code=0x7f07000e;
-        public static final int action_settings=0x7f070023;
-        /**  Messages IDs 
-         */
+        public static final int action_settings=0x7f070024;
         public static final int auto_focus=0x7f070000;
-        public static final int btn_deliver_shipping_point=0x7f07001d;
-        public static final int btn_in_port_driver=0x7f070013;
-        public static final int btn_in_port_shipping_point=0x7f07001b;
-        public static final int btn_login=0x7f07001a;
-        public static final int btn_out_port_driver=0x7f070014;
-        public static final int btn_out_port_shipping_point=0x7f07001c;
-        public static final int button_back=0x7f07001e;
-        public static final int button_function=0x7f070020;
+        public static final int bottom_mask=0x7f070015;
+        public static final int btn_cancel_express=0x7f070008;
+        public static final int btn_confirm=0x7f070018;
+        public static final int btn_confirm_express=0x7f070007;
+        public static final int btn_deliver_shipping_point=0x7f07001c;
+        public static final int btn_in_port_driver=0x7f070009;
+        public static final int btn_in_port_shipping_point=0x7f07001d;
+        public static final int btn_login=0x7f07000f;
+        public static final int btn_out_port_driver=0x7f07000a;
+        public static final int btn_out_port_shipping_point=0x7f07001e;
+        public static final int btn_scan_code_result_confirm=0x7f07001b;
+        public static final int capture_containter=0x7f070010;
+        public static final int capture_crop_layout=0x7f070013;
+        public static final int capture_preview=0x7f070011;
+        public static final int capture_scan_line=0x7f070014;
         public static final int decode=0x7f070001;
         public static final int decode_failed=0x7f070002;
         public static final int decode_succeeded=0x7f070003;
-        public static final int encode_failed=0x7f070004;
-        public static final int encode_succeeded=0x7f070005;
-        public static final int et_password=0x7f070016;
-        public static final int et_username=0x7f070015;
-        public static final int gridview=0x7f07000c;
-        public static final int include1=0x7f070012;
-        public static final int launch_product_query=0x7f070006;
-        public static final int pb_connecting=0x7f070021;
-        public static final int preview_view=0x7f070010;
-        public static final int quit=0x7f070007;
-        public static final int rb_role_driver=0x7f070019;
-        public static final int rb_role_shipping_point=0x7f070018;
-        public static final int restart_preview=0x7f070008;
-        public static final int return_scan_result=0x7f070009;
-        public static final int rg_role=0x7f070017;
-        public static final int search_book_contents_failed=0x7f07000a;
-        public static final int search_book_contents_succeeded=0x7f07000b;
-        public static final int split=0x7f07000f;
-        public static final int textview_title=0x7f07001f;
-        public static final int tv_load_image=0x7f070022;
-        public static final int viewfinder_view=0x7f070011;
-        public static final int webview=0x7f07000d;
+        public static final int et_password=0x7f07000d;
+        public static final int et_username=0x7f07000b;
+        public static final int ib_clear_password=0x7f07000e;
+        public static final int ib_clear_username=0x7f07000c;
+        public static final int iv_scan_code_result=0x7f070019;
+        public static final int left_mask=0x7f070016;
+        public static final int pb_connecting=0x7f070022;
+        public static final int quit=0x7f070005;
+        public static final int restart_preview=0x7f070004;
+        public static final int right_mask=0x7f070017;
+        public static final int top_mask=0x7f070012;
+        public static final int tv_back=0x7f070020;
+        public static final int tv_co_info=0x7f07001f;
+        public static final int tv_confirm_express_info=0x7f070006;
+        public static final int tv_load_image=0x7f070023;
+        public static final int tv_scan_code_result=0x7f07001a;
+        public static final int tv_title=0x7f070021;
     }
     public static final class layout {
-        public static final int activity_capture=0x7f030000;
+        public static final int activity_confirm_express=0x7f030000;
         public static final int activity_driver_main=0x7f030001;
         public static final int activity_login=0x7f030002;
-        public static final int activity_shipping_point_main=0x7f030003;
-        public static final int activity_title=0x7f030004;
-        public static final int dialog_connection=0x7f030005;
+        public static final int activity_qr_scan=0x7f030003;
+        public static final int activity_scan_code_result_failed=0x7f030004;
+        public static final int activity_scan_code_result_success=0x7f030005;
+        public static final int activity_shipping_point_main=0x7f030006;
+        public static final int activity_welcome=0x7f030007;
+        public static final int common_titlebar=0x7f030008;
+        public static final int dialog_connection=0x7f030009;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
@@ -569,26 +583,50 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f080002;
         public static final int app_name=0x7f080000;
-        public static final int deliver_scan_code=0x7f080010;
+        /**  common 
+         */
+        public static final int back=0x7f080004;
+        public static final int cancel=0x7f080006;
+        public static final int confirm=0x7f080005;
+        /**  confirm express 
+         */
+        public static final int confirm_express_id=0x7f08001a;
+        public static final int confirm_info_text_1=0x7f08001b;
+        public static final int confirm_info_text_2=0x7f08001c;
+        public static final int confirm_info_text_3=0x7f08001d;
+        public static final int deliver_scan_code=0x7f080016;
+        public static final int deliver_scan_code_result_failed=0x7f080023;
+        public static final int deliver_scan_code_result_success=0x7f080022;
         public static final int hello_world=0x7f080001;
+        public static final int in_port_scan_code=0x7f080014;
+        public static final int in_port_scan_code_result_failed=0x7f08001f;
+        /**  scan code result 
+         */
+        public static final int in_port_scan_code_result_success=0x7f08001e;
+        public static final int login=0x7f08000b;
+        public static final int login_dialog_is_loginning=0x7f08000f;
+        public static final int login_role_driver=0x7f08000a;
+        public static final int login_role_shipping_point=0x7f080009;
+        public static final int login_text_empty_password=0x7f08000c;
+        public static final int login_text_is_loginning=0x7f08000e;
+        public static final int login_text_login_auth_failed=0x7f080012;
+        public static final int login_text_login_failed=0x7f080011;
+        public static final int login_text_login_success=0x7f080010;
+        public static final int login_text_network_not_connected=0x7f08000d;
+        public static final int out_port_scan_code=0x7f080015;
+        public static final int out_port_scan_code_result_failed=0x7f080021;
+        public static final int out_port_scan_code_result_success=0x7f080020;
+        public static final int password=0x7f080008;
         /**  scan code 
          */
-        public static final int in_port_scan_code=0x7f08000e;
-        public static final int login=0x7f080007;
-        public static final int login_dialog_is_loginning=0x7f08000b;
-        public static final int login_role_driver=0x7f080006;
-        public static final int login_role_shipping_point=0x7f080005;
-        public static final int login_text_empty_password=0x7f080008;
-        public static final int login_text_is_loginning=0x7f08000a;
-        public static final int login_text_login_failed=0x7f08000d;
-        public static final int login_text_login_success=0x7f08000c;
-        public static final int login_text_network_not_connected=0x7f080009;
-        public static final int out_port_scan_code=0x7f08000f;
-        public static final int password=0x7f080004;
-        public static final int scan_text=0x7f080011;
+        public static final int scan_code_title=0x7f080013;
+        public static final int scan_dialog_is_processing=0x7f080018;
+        public static final int scan_result=0x7f080019;
+        public static final int scan_tips=0x7f080017;
         /**  login 
          */
-        public static final int username=0x7f080003;
+        public static final int username=0x7f080007;
+        public static final int welcome_text=0x7f080003;
     }
     public static final class style {
         /** 
@@ -614,12 +652,17 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f090001;
         public static final int ConnDialog=0x7f090002;
-        public static final int HC_TextView=0x7f090003;
-        public static final int HC_TextView_Normal=0x7f090004;
-        public static final int HC_TextView_Normal_OnDark=0x7f090005;
+        public static final int TPL_Button=0x7f09000a;
+        public static final int TPL_Button_Normal_Blue=0x7f09000b;
+        public static final int TPL_TextView=0x7f090004;
+        public static final int TPL_TextView_Action=0x7f090008;
+        public static final int TPL_TextView_Action_OnLeft=0x7f090009;
+        public static final int TPL_TextView_Normal=0x7f090005;
+        public static final int TPL_TextView_Normal_OnDark=0x7f090006;
+        public static final int TPL_TextView_Title=0x7f090007;
+        public static final int TPL_Title=0x7f090003;
     }
 }

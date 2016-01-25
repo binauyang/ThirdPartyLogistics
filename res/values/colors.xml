@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <color name="iqiyiaqua">#93c437</color>
-    <color name="iqiyigreen">#78a22e</color>
+    <color name="iqiyiaqua">#4fa0e4</color>
+    <color name="iqiyigreen">#0168c7</color>
     <color name="iqiyigrey">#ebf0f1</color>
     
     <color name="bg_multi_func">#EBF0F1</color>

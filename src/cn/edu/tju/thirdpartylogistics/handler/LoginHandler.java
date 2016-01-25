@@ -1,15 +1,11 @@
 package cn.edu.tju.thirdpartylogistics.handler;
 
-import org.apache.http.NameValuePair;
-
-import cn.edu.tju.thirdpartylogistics.http.HttpActions;
+import android.content.Context;
 import cn.edu.tju.thirdpartylogistics.listener.OnLoginListener;
-import cn.edu.tju.thirdpartylogistics.listener.OnLogoutListener;
-import cn.edu.tju.thirdpartylogistics.utils.L;
+import cn.edu.tju.thirdpartylogistics.listener.OnReloginListener;
 import cn.edu.tju.thirdpartylogistics.utils.LogisticsCallback;
 import cn.edu.tju.thirdpartylogistics.utils.LogisticsLogin;
-
-import android.content.Context;
+import cn.edu.tju.thirdpartylogistics.utils.TPLPrefUtils;
 
 
 /**
@@ -32,12 +28,12 @@ public class LoginHandler {
 		}).start();
 	}
 
-	public static void login(final Context context, final String account, final String password, final int roleType, final LogisticsCallback.LoginCallback callback) {
+	public static void login(final Context context, final String username, final String password, final LogisticsCallback.LoginCallback callback) {
 		final OnLoginListener onLoginListener = new OnLoginListener() {
 			@Override
-			public void onLoginSuccess() {
-				loginInit(context, account, password);
-				callback.onLoginSuccess();
+			public void onLoginSuccess(int type) {
+				loginInit(context, username, password);
+				callback.onLoginSuccess(type);
 			}
 
 			@Override
@@ -48,36 +44,33 @@ public class LoginHandler {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-//				NameValuePair pair = HttpActions.loginPassport(account, password);
-//				String authcookie = pair != null ? pair.getValue() : password;
-				LogisticsLogin.getInstance().login(account, password, roleType, onLoginListener);
+				LogisticsLogin.getInstance().login(username, password, onLoginListener);
 			}
 		}).start();
 	}
 
-//	public static void relogin(final Context context, final HCCallback.ReloginCallback callback) {
-//		final OnReloginListener onReloginListener = new OnReloginListener() {
-//			@Override
-//			public void onReloginSuccess() {
-//				String account = HCPrefUtils.getAccount(context);
-//				String authcookie = HCPrefUtils.getAuthcookie(context);
-//				loginInit(context, account, authcookie);
-//				callback.onReloginSuccess();
-//			}
-//
-//			@Override
-//			public void onReloginError(int code) {
-//				if (HCLogin.RESULT_TIMEOUT == code) Avatars.initAvatars();
-//				callback.onReloginError(code);
-//			}
-//		};
-//		new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				HCLogin.getInstance().relogin(onReloginListener);
-//			}
-//		}).start();
-//	}
+	public static void relogin(final Context context, final LogisticsCallback.ReloginCallback callback) {
+		final OnReloginListener onReloginListener = new OnReloginListener() {
+			@Override
+			public void onReloginSuccess(int type) {
+				String account = TPLPrefUtils.getUsername(context);
+				String authcookie = TPLPrefUtils.getPassword(context);
+				loginInit(context, account, authcookie);
+				callback.onReloginSuccess(type);
+			}
+
+			@Override
+			public void onReloginError(int code) {
+				callback.onReloginError(code);
+			}
+		};
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				LogisticsLogin.getInstance().relogin(onReloginListener);
+			}
+		}).start();
+	}
 //
 //	public static void logout(final Context context, final HCCallback.LogoutCallback callback) {
 //		final OnLogoutListener onLogoutListener = new OnLogoutListener() {

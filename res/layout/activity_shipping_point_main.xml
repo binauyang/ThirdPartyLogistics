@@ -5,22 +5,35 @@
     android:orientation="vertical"
     tools:context="cn.edu.tju.thirdpartylogistics.ui.activity.ShippingPointMainActivity" >
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shipping_point_logo" />
+
+    <Button
+        android:id="@+id/btn_deliver_shipping_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shipping_point_delivery_scan_code" />
+    
     <Button
         android:id="@+id/btn_in_port_shipping_point"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/in_port_scan_code" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shipping_point_in_port_scan_code" />
     
     <Button
         android:id="@+id/btn_out_port_shipping_point"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/out_port_scan_code" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shipping_point_out_port_scan_code" />
     
-    <Button
-        android:id="@+id/btn_deliver_shipping_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/deliver_scan_code" />
-
 </LinearLayout>

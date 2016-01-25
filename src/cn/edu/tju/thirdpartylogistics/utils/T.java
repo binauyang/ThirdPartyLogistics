@@ -16,7 +16,7 @@ public class T {
 		int wrap = ViewGroup.LayoutParams.WRAP_CONTENT;
 		ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(wrap, wrap);
 		view.setLayoutParams(params);
-		view.setBackgroundColor(R.drawable.backgroud_toast);
+		view.setBackgroundResource(R.drawable.backgroud_toast);
 		view.setGravity(Gravity.CENTER);
 		view.setTextColor(Color.WHITE);
 		view.setText(text.toString());

@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            style="@style/HC_TextView.Normal.OnDark"
+            style="@style/TPL_TextView.Normal.OnDark"
             android:text="正在连接..." />
 
     </LinearLayout>

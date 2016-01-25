@@ -15,6 +15,7 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
     </style>
     
     <style name="ConnDialog" parent="@android:Theme.Dialog">
@@ -26,16 +27,46 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
     
-    <style name="HC_TextView" parent="@android:style/Widget.TextView">
+    <style name="TPL_Title">
+        <item name="android:background">@color/iqiyiaqua</item>
+    </style>
+    
+    <style name="TPL_TextView" parent="@android:style/Widget.TextView">
         <item name="android:textColor">#FF555555</item>
     </style>
     
-    <style name="HC_TextView.Normal" parent="@style/HC_TextView">
+    <style name="TPL_TextView.Normal" parent="@style/TPL_TextView">
         <item name="android:textSize">15sp</item>
     </style>
     
-    <style name="HC_TextView.Normal.OnDark" parent="@style/HC_TextView.Normal">
+    <style name="TPL_TextView.Normal.OnDark" parent="@style/TPL_TextView.Normal">
         <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+    
+    <style name="TPL_TextView.Title" parent="@style/TPL_TextView.Normal.OnDark">
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="TPL_TextView.Action" parent="@style/TPL_TextView.Normal.OnDark">
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TPL_TextView.Action.OnLeft" parent="TPL_TextView.Action">
+        <item name="android:clickable">true</item>
+        <item name="android:drawableLeft">@drawable/actionbar_up_indicator</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">30dp</item>
+    </style>
+    
+    <style name="TPL_Button" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="TPL_Button.Normal.Blue" parent="@style/TPL_Button">
+        <item name="android:background">@drawable/selector_btn_blue_corner</item>
     </style>
 
 </resources>
